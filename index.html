@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>GlowSkin | Medication Reference</title>
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <p class="intro">MED SPA TOOL</p>
+        <h1>GlowCheck</h1>
+
+        <p>
+          Search medications and view reference information from public sources.
+        </p>
+      </header>
+
+      <section class="search-section">
+        <label for="medicationInput">Medication</label>
+
+        <div class="search-group">
+          <input type="text" id="medicationInput" placeholder="Try Botox" />
+
+          <button id="searchButton">Search</button>
+        </div>
+
+        <p id="message"></p>
+      </section>
+
+      <section id="results" class="results hidden">
+        <div class="card">
+          <p class="card-label">FDA Information</p>
+
+          <h2 id="brandName"></h2>
+          <div class="info-grid">
+            <div>
+              <span>Generic Name</span>
+              <p id="genericName"></p>
+            </div>
+
+            <div>
+              <span>Route</span>
+              <p id="route"></p>
+            </div>
+
+            <div>
+              <span>Product Type</span>
+              <p id="productType"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="card-label">Background</p>
+          <h2 id="wikiTitle"></h2>
+          <p id="wikiDescription"></p>
+          <a href="#" id="wikilink" target="_blank" rel="noopener noreferrer"
+            >Learn More</a
+          >
+        </div>
+      </section>
+
+      <p class="disclaimer">
+        This application is for information purposes only.
+      </p>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
