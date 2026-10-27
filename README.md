@@ -4,7 +4,8 @@ A clean, spa-inspired reference tool that lets med spa staff look up a medicatio
 
 Built with HTML, CSS, and JavaScript. Used data returned from one API to make a request to a second API.
 
-![GlowCheck home screen](screenshots/home.png)
+<img width="1232" height="962" alt="image" src="https://github.com/user-attachments/assets/97bc17a9-2f72-4f5f-a599-b33b48e2059a" />
+
 
 ---
 
@@ -18,8 +19,9 @@ GlowCheck chains two public APIs together:
 ```
 User search ──▶ openFDA ──▶ generic name ──▶ Wikipedia ──▶ background summary
 ```
+<img width="1232" height="969" alt="image" src="https://github.com/user-attachments/assets/9a467267-d8f2-45f8-9b17-3a26ad205198" />
 
-![Search results for Latisse](screenshots/results.png)
+
 
 ---
 
