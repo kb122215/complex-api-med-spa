@@ -3,69 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
     <title>GlowSkin | Medication Reference</title>
   </head>
   <body>
+    <header class="hero">
+      <p class="eyebrow">Med Spa Tool</p>
+      <h1>GlowCheck</h1>
+      <p class="tagline">medication reference</p>
+      <p class="hero-copy">
+        Search medications and view reference information from public sources.
+      </p>
+    </header>
+
     <main class="app">
-      <header>
-        <p class="intro">MED SPA TOOL</p>
-        <h1>GlowCheck</h1>
-
-        <p>
-          Search medications and view reference information from public sources.
-        </p>
-      </header>
-
       <section class="search-section">
         <label for="medicationInput">Medication</label>
 
         <div class="search-group">
-          <input type="text" id="medicationInput" placeholder="Try Botox" />
-
-          <button id="searchButton">Search</button>
+          <input
+            type="text"
+            id="medicationInput"
+            placeholder="Try Botox"
+            autocomplete="off"
+          />
+          <button type="button" id="searchButton">Search</button>
         </div>
 
-        <p id="message"></p>
+        <div class="suggestions" id="suggestions">
+          <span>Popular:</span>
+          <button type="button" class="chip" data-med="Botox">Botox</button>
+          <button type="button" class="chip" data-med="Dysport">Dysport</button>
+          <button type="button" class="chip" data-med="Lidocaine">
+            Lidocaine
+          </button>
+          <button type="button" class="chip" data-med="Tretinoin">
+            Tretinoin
+          </button>
+          <button type="button" class="chip" data-med="Latisse">Latisse</button>
+        </div>
+
+        <p id="message" class="message" aria-live="polite"></p>
       </section>
 
       <section id="results" class="results hidden">
-        <div class="card">
+        <article class="card card-fda">
           <p class="card-label">FDA Information</p>
-
           <h2 id="brandName"></h2>
+
           <div class="info-grid">
             <div>
               <span>Generic Name</span>
               <p id="genericName"></p>
             </div>
-
             <div>
               <span>Route</span>
               <p id="route"></p>
             </div>
-
             <div>
               <span>Product Type</span>
               <p id="productType"></p>
             </div>
+            <div>
+              <span>Manufacturer</span>
+              <p id="manufacturer"></p>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card card-wiki">
           <p class="card-label">Background</p>
           <h2 id="wikiTitle"></h2>
           <p id="wikiDescription"></p>
-          <a href="#" id="wikilink" target="_blank" rel="noopener noreferrer"
-            >Learn More</a
+          <a
+            href="#"
+            id="wikiLink"
+            class="link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Learn More on Wikipedia &rarr;</a
           >
-        </div>
+        </article>
       </section>
-
-      <p class="disclaimer">
-        This application is for information purposes only.
-      </p>
     </main>
+
+    <footer>
+      <p class="disclaimer">
+        This application is for information purposes only and is not medical
+        advice.
+      </p>
+    </footer>
+
     <script src="main.js"></script>
   </body>
 </html>
